@@ -1,55 +1,71 @@
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { AiFillFacebook, AiFillTwitterCircle } from 'react-icons/ai';
+import { PiAppleLogoLight } from 'react-icons/pi';
+// import SignUp from './SignUp';
 function Login() {
   return (
-    <div className='flex w-full h-screen bg-black'>
-      <div className='flex m-auto '>
-        <form className='flex w-[35vw] h-[80vh] m-9 mx-auto bg-blue-200'>
-          <div className='flex m-auto pt-22 py-16 px-24 flex-grow flex-col gap-6 '>
-            <h3 className=' flex items-center justify-center w-22 text-5xl font-bold'>Login</h3>
-            <label className='flex flex-col text-lg mt-1'>
-              Enter Your name:
-              <input
-                className='flex flex-col w-[19rem] pl-2 h-9 text-sm rounded-md outline-none'
-                type='text'
-                placeholder='Enter Your username'
-              />
-            </label>
-            <label className='text-lg flex flex-col '>
-              Enter Your Email:
-              <input
-                className='flex flex-col w-[19rem] h-9 text-sm rounded-md pl-7 outline-none'
-                type='text'
-                placeholder='Enter Your Email'
-              />
-            </label>
-            <label className=' flex flex-col text-lg'>
-              Enter Your password:
-              <input
-                className='flex flex-col w-[19rem] h-9 text-sm rounded-md pl-7 outline-none'
-                type='password'
-                placeholder='password'
-              />
-            </label>
-
-            <button className=' mt-4 bg-blue-900 hover:bg-blue-400  p-2 rounded-full h-10 font-bold text-white'>
-              Login
-            </button>
-            <div className='flex gap-9 m-auto'>
-          
-              <AiFillFacebook size={30} className='text-blue-700' />
-              <FcGoogle size={30} />
-              <AiFillTwitterCircle size={30} className='text-blue-400' />
-            </div>
-
-            <h3 className='m-auto gap-6'>
-              Not a Member?<span className='pl-2 text-green-700 cursor-pointer'>SignUp</span>
-            </h3>
+    <>
+   
+    <div className='py-28 min-h-screen bg-gray-200'>
+      <div className='container mx-auto'>
+        <div className='flex flex-col lg:h-[70vh] lg:flex-row w-10/12 lg:w-9/12 bg-blue-300 rounded-xl mx-auto shadow-lg overflow-hidden'>
+          <div className='w-full md:3/4 lg:w-1/2 flex flex-col bg-auto bg-center bg-no-repeat'>
+            {/* creating image container */}
+            <img
+              className='h-screen w-full md:3/12 items-center justify-center container' src='https://img.freepik.com/premium-photo/dark-blue-3d-product-display-podium-abstract-asymmetrical-background-photography-advertisement_611870-2028.jpg' />
           </div>
-        </form>
+          {/* creating from section */}
+             <div className='w-full lg:w-1/2 py-16 px-12'>
+              <h3 className='text-3xl mb-4 items-center justify-center text-center font-bold text-blue-900 '>Login</h3>
+             <p className='mb-4 text-center text-white'>Login your existing account</p>
+
+               <form action='' className=''>
+              {/* start form for registration component */}
+              <div className='grid gap-5  '>
+                  <input
+                    className='outline-none flex border border-gray-400 py-1 px-2  rounded-md shadow-md shadow-blue-900'
+                    type='text'
+                    placeholder='First Name'
+                  />
+                 
+               </div>
+               <div className='mt-5 grid grid-cols-1 gap-4 m-auto'>
+               <input
+                    className='outline-none flex border border-gray-400 py-1 px-2  rounded-md shadow-md shadow-blue-900 '
+                    type='text'
+                    placeholder='Enter Your Email '
+                  />
+              
+                  <input
+                    className='outline-none flex border border-gray-400 py-1 px-2  rounded-md shadow-md shadow-blue-900 '
+                    type='password'
+                    placeholder='password'
+                  />
+                 
+                <button className=' mt-4 bg-blue-500 hover:bg-blue-800  shadow-inner shadow-blue-800 rounded-full h-10 font-bold text-white'>
+                  Registration
+                </button>
+                <PiAppleLogoLight
+                  size={30}
+                  className='mt-2 p-1 w-full bg-black text-white border-1 shadow-inner shadow-blue-800 border-white rounded-full h-10 font-thin cursor-pointer'
+                />
+                <FcGoogle
+                  size={30}
+                  className=' p-1 w-full bg-white border-1  hover:bg-white  shadow-inner shadow-blue-800  rounded-full h-10 font-bold cursor-pointer'
+                />
+                <h3 className='m-auto gap-6'>
+                 Not a Member ?
+                  <span className='pl-2 text-cyan-900 cursor-pointer text-lg font-bold'>SignUp</span>
+                </h3>
+               </div>
+              
+             
+            </form>
+          </div>
+        </div>
       </div>
     </div>
+    </>
   );
 }
 

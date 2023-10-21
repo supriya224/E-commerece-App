@@ -1,71 +1,85 @@
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import {AiFillTwitterCircle } from 'react-icons/ai';
+import { PiAppleLogoLight } from 'react-icons/pi';
+// import SignUp from './SignUp';
 function SignUp() {
   return (
-    <div className='mx-auto flex w-full h-screen bg-black'>
-      <div className='flex m-auto w-[100vw]'>
-      
-        <form className='flex w-[75vw] h-[80vh] mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg '>
-        <img src='https://cdn3d.iconscout.com/3d/premium/thumb/login-page-5000918-4165667.png?f=webp' alt='' className='m-auto items-center w-[25rem] h-[25rem]'/>
-          <div className='grid pt-22 py-9 px-24 flex-grow flex-col gap-3 '>
-         <div className='m-auto my-2 py-1 px-1 w-full h-[70vh] bg-fuchsia-300 grid-flow-row-dense '>
-            <h3 className=' flex items-center justify-center w-22 text-5xl font-bold'>Registration</h3>
-            <label className='m-auto text-lg mt-1'>
-              Enter Your name:
-              <input
-                className='grid w-[15rem] pl-2 h-9 text-sm rounded-md outline-none border-2 shadow-md shadow-blue-900'
-                type='text'
-                placeholder='Enter Your username'
-              />
-            </label>
-           
-            <label className='m-auto text-lg flex flex-col '>
-              Enter Your Email:
-              <input
-                className='flex flex-col w-[15rem] h-9 text-sm rounded-md pl-7 outline-none border-2 shadow-md shadow-blue-900'
-                type='text'
-                placeholder='Enter Your Email'
-              />
-            </label>
-            <label className='m-auto  flex flex-col text-lg'>
-              Enter Your password:
-              <input
-                className='flex flex-col w-[15rem] h-9 text-sm rounded-md pl-7 outline-none border-2 shadow-md shadow-blue-900'
-                type='password'
-                placeholder='password'
-              />
-            </label>
-            <label className='m-auto flex flex-col text-lg mt-1'>
-              Confirm Password:
-              <input
-                className='w-[15rem] pl-2 h-9 text-sm rounded-md outline-none shadow-md border-2 shadow-blue-900'
-                type='password'
-                placeholder='confirm password'
-              />
-            </label>
-
-            <button className=' m-8 mt-4 bg-blue-900 hover:bg-blue-300 shadow-lg shadow-black p-2 rounded-full h-10 font-bold text-white'>
-              Registration
-            </button>
-            <div className=' pt-1 gap-9 m-auto'>
-          <div className='relative'>
-          <FcGoogle size={30} className=' cursor-pointer' />
+    <div className='py-24 min-h-screen bg-gray-200'>
+      <div className='container mx-auto'>
+        <div className='flex flex-col lg:h-[80vh]  lg:flex-row w-10/12 lg:w-9/12 bg-cyan-200 rounded-xl mx-auto shadow-lg overflow-hidden'>
+          <div className='w-full lg:w-1/2 flex flex-col bg-auto bg-center bg-no-repeat'>
+            {/* creating image container */}
+            <img
+              className='h-screen items-center justify-center container'
+              src='https://w0.peakpx.com/wallpaper/425/176/HD-wallpaper-cyan-windows-11-logo-windows-11.jpg'
+            />
           </div>
+          {/* creating from section */}
+             <div className='w-full lg:w-1/2 py-16 px-12'>
+              <h3 className='text-3xl text-cyan-700 font-bold mb-4 items-center justify-center text-center'>SignUp</h3>
+             <p className='mb-4'>Create your account, It's free and only take a minute</p>
+
+               <form action='' className=''>
+              {/* start form for registration component */}
+              <div className='grid grid-cols-2 gap-5 text-sm '>
               
-          <div>
-          <AiFillTwitterCircle size={30} className='text-blue-900 cursor-pointer' />
-          </div>
-           
-            </div>
+               
+                  <input
+                    className='outline-none flex border border-gray-400 py-1 px-2 rounded-md shadow-md shadow-cyan-900 '
+                    type='text'
+                    placeholder='First Name'
+                  />
 
-            <h3 className='m-auto gap-2 pb-9'>
-              Not a Member?<span className='pl-2 text-green-900 text-xl font-bold cursor-pointer'>SignUp</span>
-            </h3>
-         </div>
-            
+                  <input
+                    className='outline-none flex border border-gray-400 py-1 px-2 w-full rounded-md shadow-md shadow-cyan-900'
+                    type='text'
+                    placeholder='Last Name '
+                  />
+               </div>
+               <div className='mt-5 grid grid-cols-1 gap-4 m-auto text-sm'>
+               <input
+                    className='outline-none flex border border-gray-400 py-1 px-2 rounded-md shadow-md shadow-cyan-900'
+                    type='text'
+                    placeholder='Enter Your Email '
+                  />
+              
+                  <input
+                    className='outline-none flex border border-gray-400 py-1 px-2 rounded-md shadow-md shadow-cyan-900 '
+                    type='password'
+                    placeholder='password'
+                  />
+                   <input
+                    className='outline-none flex border border-gray-400 py-1 px-2 rounded-md shadow-md shadow-cyan-900'
+                    type='password'
+                    placeholder='Confirm Password'
+                  />
+                  <div>
+                    <input type='checkbox' className='border border-gray-40 ' />
+                    <span className='pl-3'>
+                         I accept the <a className='text-gray-400 font-semibold'>Terms of Use</a> &<a className='text-gray-400 font-semibold'> Privacy Policy</a>
+                    </span>
+                  </div>
+                <button className=' mt-4 bg-cyan-900 hover:bg-cyan-800  shadow-inner shadow-cyan-800 rounded-full h-10 font-bold text-white'>
+                 Register Now
+                </button>
+                <PiAppleLogoLight
+                  size={30}
+                  className='mt-2 p-1 w-full bg-black text-white border-1 shadow-inner shadow-cyan-800  border-white rounded-full h-10 font-thin cursor-pointer'
+                />
+                <FcGoogle
+                  size={30}
+                  className=' p-1 w-full bg-white border-1  hover:bg-white  shadow-inner shadow-cyan-800  rounded-full h-10 font-bold cursor-pointer'
+                />
+                <h3 className='m-auto gap-6 text-md'>
+                  Already logged in ?
+                  <span className='pl-2 text-blue-700 cursor-pointer text-lg font-bold'>Login</span>
+                </h3>
+               </div>
+              
+             
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
